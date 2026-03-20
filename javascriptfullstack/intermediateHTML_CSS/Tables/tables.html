@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    table, td, th {
+        border: 1px solid black;
+    }
+    html {
+        font-family: sans-serif;
+    }
+    table {
+        border-collapse: collapse;
+        border: 2px solid rgb(200, 200 ,200);
+        font-size: 0.8rem;
+    }
+    th {
+        background-color: rgb(235, 235, 235);
+    }
+    td {
+        text-align: center;
+    }
+
+/*     td:first-child {
+        font-weight: bold;
+        background-color: rgb(235, 235, 235);
+    } */
+
+    tr:nth-child(even) td:first-child,
+     tr:nth-child(odd) td:first-child {
+        background-color: rgb(245, 245, 245);
+    }
+
+    caption {
+        padding: 10px;
+    }
+    
+</style>
+<body>
+    <table>
+        <thead>
+        <tr colspan="2">
+            <td>&nbsp;</td>
+            <th>Second Header</th>
+            <th>Third Header</th>
+            <th>Fourth Header</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Test1</td>
+            <td>This is also a data cell!</td>
+            <td>Yes</td>
+            <td>No</td>
+        </tr>
+        <tr>
+            <td>Test 2</td>
+            <td>This is also a data cell!</td>
+            <td>Yes</td>
+            <td>No</td>
+        </tr>
+        <tr>
+            <td>Test 2</td>
+            <td>This is also a data cell!</td>
+            <td>Yes</td>
+            <td>No</td>
+        </tr>
+        <tr>
+            <td>Test 2</td>
+            <td>This is also a data cell!</td>
+            <td>Yes</td>
+            <td>No</td>
+        </tr>
+        </tbody>
+    </table>
+</body>
+</html>
