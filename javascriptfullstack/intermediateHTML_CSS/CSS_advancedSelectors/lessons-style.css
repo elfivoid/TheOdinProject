@@ -1,0 +1,122 @@
+/* Lesson 1 */
+
+body {
+  font: 1.2em / 1.5 sans-serif;
+  background-color: rgb(9, 4, 14);
+  color: aliceblue;
+}
+
+h1 {
+    color: aquamarine;
+}
+
+h2 {
+    background-color: rgb(17, 26, 56);
+}
+
+p > span {
+    font-size: 150%;
+}
+
+/* Lesson 2 */
+
+#special {
+    background-color: rgb(0, 255, 179);
+    color: rgb(9, 4, 14);
+}
+
+.alert {
+    border: 1px solid rgb(47, 255, 255);
+    padding: 0.25rem;
+}
+
+.alert.stop {
+    background-color: rgb(37, 28, 87);
+    padding: 0.25rem;
+}
+
+.alert.go {
+    background-color: rgb(28, 80, 87);
+    padding: 0.25rem;
+}
+
+/* Lesson 3 */
+
+* {
+    box-sizing: border-box;
+}
+
+table {
+  border-collapse: collapse;
+  width: 300px;
+}
+
+td,
+th {
+  padding: 0.2em;
+  text-align: left;
+}
+
+a:link {
+    color: aquamarine;
+}
+
+a:visited {
+    color: rgb(199, 164, 255);
+}
+
+a:hover {
+    text-decoration: unset;
+}
+
+tr:nth-child(even) {
+background-color:#221b5f;
+}
+
+.container-3 p:first-child::first-line {
+  color: rgb(136, 121, 202);
+}
+
+/* Lesson 4 */
+
+h2 + p {
+    background-color: #221b5f;
+}
+
+.list > li {
+    border-bottom: 1px solid white;
+    list-style: none;
+    padding: 0.25rem;
+}
+
+/* Lesson 5 */
+
+.ul-5 {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.ul-5 li  {
+  margin-bottom: 0.5em;
+}
+
+.ul-5 a  {
+  display: block;
+  padding: 0.5em;
+border: 5px solid grey;
+}
+
+.ul-5 a  {
+
+}
+
+a[title] {
+    border-color: pink;
+}
+a[href*="contact"] {
+  border-color: rgb(36, 175, 133);
+}
+a[href^="https"] {
+  border-color: rgb(157, 88, 189);
+}
