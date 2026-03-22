@@ -1,0 +1,169 @@
+/* main div {
+
+}
+
+main > div {
+
+}
+
+main > div > div {
+
+}
+
+.group1 + div + div {
+
+}
+
+.group1 + div {
+
+}
+*/
+/* All of .group1's div siblings - in this case the 2nd and 3rd .child divs, will get selected by this */
+/*.group1 ~ div {
+
+} 
+*/
+/* .first {
+    font-size: 120%;
+    font-weight: bold;
+} */
+
+/* article p:first-child {
+    font-weight: 120%;
+    font-weight: bold;
+} */
+
+article p::first-line {
+    font-size: 120%;
+    font-weight: bold;
+}
+
+p::selection {
+    background-color: red;
+}
+
+a:link, a:visited {
+    color: rebeccapurple;
+    font-weight: bold;
+}
+
+a:hover {
+    color: hotpink;
+}
+
+article p:hover {
+    color:blue;
+}
+
+article p:last-child {
+    background-color: orange;
+}
+
+article p:first-child::first-letter {
+    background-color: yellow;
+    border: 1px solid black;
+    font-size: 2rem;
+}
+
+/* .box::before {
+    content: "This should show before the other content. Test Test Test! ";
+    background-color: yellow;
+} */
+
+/* .box::after {
+    content: " This should show before the other content. Test Test Test! ";
+    background-color: yellow;
+} */
+
+.box::after {
+    content: " ➥  🤓 😄 😎";
+}
+
+.arrow_box {
+	position: relative;
+	background: #88b7d5;
+	border: 4px solid #c2e1f5;
+    height: 10rem;
+}
+.arrow_box:after, .arrow_box:before {
+	top: 100%;
+	left: 50%;
+	border: solid transparent;
+	content: "";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.arrow_box:after {
+	border-color: rgba(136, 183, 213, 0);
+	border-top-color: #88b7d5;
+	border-width: 30px;
+	margin-left: -30px;
+}
+.arrow_box:before {
+	border-color: rgba(194, 225, 245, 0);
+	border-top-color: #c2e1f5;
+	border-width: 36px;
+	margin-left: -36px;
+}
+
+  /* This rule will apply to all links */
+  a {
+    text-decoration: underline;
+  }
+
+  /* This will apply to unvisited links */
+  a:link {
+    color: blue;
+  }
+
+  /* And you guessed it, this applies to all links the user has clicked on */
+  a:visited {
+    color: purple;
+  }
+
+    .myList:nth-child(5) {/* Selects the 5th element with class myList */}
+
+  .myList:nth-child(3n) { /* Selects every 3rd element with class myList */}
+
+  .myList:nth-child(3n + 3) { /* Selects every 3rd element with class myList, beginning with the 3rd */}
+
+  .myList:nth-child(even) {/* Selects every even element with class myList */}
+
+    [src] {
+    /* This will target any element that has a src attribute. */
+  }
+
+  img[src] {
+    /* This will only target img elements that have a src attribute. */
+  }
+
+  img[src="puppy.jpg"] {
+    /* This will target img elements with a src attribute that is exactly "puppy.jpg" */
+  }
+
+  [class^='aus'] {
+  /* Classes are attributes too!
+    This will target any class that begins with 'aus':
+    class='austria'
+    class='australia'
+  */
+}
+
+[src$='.jpg'] {
+  /* This will target any src attribute that ends in '.jpg':
+  src='puppy.jpg'
+  src='kitten.jpg'
+  */
+}
+
+[for*='ill'] {
+  /* This will target any for attribute that has 'ill' anywhere inside it:
+  for="bill"
+  for="jill"
+  for="silly"
+  for="ill"
+  */
+}
