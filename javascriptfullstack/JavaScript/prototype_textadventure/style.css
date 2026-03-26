@@ -1,0 +1,96 @@
+/*
+-------- CSS RESET --------
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    line-height: 1.5;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+p {
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+#root, #__next {
+  isolation: isolate;
+}
+
+/*
+-------- BASE COLORS --------
+*/
+
+:root {
+    --bg: #0d0f14;
+    --text-light: #e8e9ef;
+    --text-dark: #0d0f14;
+    --sans: "DM Sans", sans-serif;
+    --container: #e8e9ef;
+    --btn-main: #1bd698;
+    --btn-hover-border:var(--bg);
+}
+
+/*
+-------- BODY --------
+*/
+
+body {
+    background-color: var(--bg);
+    color:var(--text-dark);
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vw;
+}
+
+/*
+-------- COMPONENTS STYLING --------
+*/
+
+.container {
+    width: 800px;
+    max-width: 80%;
+    background-color: var(--container);
+    padding: 10px;
+    border-radius: 7px;
+    box-shadow: 0 0 10px 2px;
+}
+
+.btn-grid {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.btn {
+    background-color: var(--btn-main);
+    border: 1px solid var(--btn-main);
+    border-radius: 7px;
+    outline: none;
+}
+
+.btn:hover {
+    border-color: var(--btn-hover-border);
+}
