@@ -100,3 +100,77 @@ Healer.prototype.heal = function () {
 // Initialize individual character instances
 const hero1 = new Warrior('Bjorn', 1, 'axe');
 const hero2 = new Healer('Kanin', 1, 'cure');
+
+
+// ------------------ Prototype Inheritance -----------------------------------------------
+
+/* let head = {
+  glasses: 1
+};
+
+let table = {
+  pen: 3
+};
+
+let bed = {
+  sheet: 1,
+  pillow: 2
+};
+
+let pockets = {
+  money: 2000
+}
+
+Object.setPrototypeOf(pockets, bed);
+Object.setPrototypeOf(bed, table);
+Object.setPrototypeOf(table, head);
+
+
+
+console.log(pockets.pen);
+console.log(pockets.glasses);
+console.log(pockets.money); */
+
+
+//Faster solution, create prototype direct
+let head = {
+    glasses: 1
+};
+let table = Object.create(head);
+table.pen = 3;
+
+let bed = Object.create(table);
+bed.sheet = 1;
+bed.pillow = 2;
+
+let pockets = Object.create(bed);
+pockets.money = 2000;
+
+console.log(pockets.pen);     // 3
+console.log(pockets.glasses); // 1
+console.log(pockets.money);   // 2000
+
+//Hamster Quiz
+
+let hamster = {
+  stomach: [],
+
+  eat(food) {
+    this.stomach = [food];
+  }
+};
+
+let speedy = {
+  __proto__: hamster
+};
+
+let lazy = {
+  __proto__: hamster
+};
+
+// This one found the food
+speedy.eat("apple");
+console.log( speedy.stomach ); // apple
+
+// This one also has it, why? fix please.
+console.log( lazy.stomach ); // apple
