@@ -4,7 +4,7 @@
 const textElement = document.getElementById("text");
 const optionButtonsElement = document.getElementById("option-buttons");
 
-let state = {}
+//let state = {}
 
 // -------- START --------
 function startGame() {
@@ -48,8 +48,19 @@ function selectOption(option) {
     state = newState
     showTextNode(nextNodeNodeId)
 }
+// -------- STATE --------
+let state = {
+    currentPhase: 1,
+    perspective: "attacker",
+    pen: false,
+    sword: false,
+    shield: false,
+    attack: false,
+    merchantHealth: 100,
+    score: 0
+};
 
-// -------- TEXTNODES OVERVIEW --------
+// -------- TEXTNODES --------
 const Node = {
   start: "start",
   merchant: "merchant",
