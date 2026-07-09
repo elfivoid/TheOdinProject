@@ -2,6 +2,7 @@ const canvas = document.getElementById('myCanvas');
 const ctx = canvas.getContext('2d');
 const WIDTH = canvas.width;
 const HEIGHT = canvas.height;
+const textBox = document.getElementById('textBox');
 
 function random(max) {
     return Math.floor(Math.random() * max);
@@ -22,3 +23,8 @@ function drawRandomCircles() {
 }
 
 drawRandomCircles();
+
+
+textBox.addEventListener("keydown", function(event) {
+    output.textContent = `You pressed ${event.key}`;
+});
