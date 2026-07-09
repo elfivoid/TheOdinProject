@@ -33,7 +33,14 @@
             function() { alert("You agreed."); },
             function() { alert("You canceled the execution."); }
         );
-        
+        /* simplified version using the question mark operator, function expression assigned to welcome */
+        let age = prompt("What is your age?", 18);
+        let welcome = (age < 18) ?
+            function() { alert("Hello!"); } :
+            function() { alert("Greetings!"); };
+
+            welcome();
+
     </script>
 </body>
 </html>
