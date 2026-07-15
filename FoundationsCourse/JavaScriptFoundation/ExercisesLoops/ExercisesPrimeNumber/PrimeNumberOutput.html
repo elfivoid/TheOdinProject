@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+
+    <title>Output Even Numbers</title>
+
+    <style>
+      html {
+        font-family: sans-serif;
+      }
+      body {
+        width: 50%;
+        max-width: 800px;
+        min-width: 480px;
+        margin: 0 auto;
+      }
+      .lastResult {
+        color: white;
+        padding: 3px;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <script>
+      /* For each i in the interval {
+  check if i has a divisor from 1..i
+  if yes => the value is not a prime
+  if no => the value is a prime, show it */
+
+  let n = 10;
+
+  nextPrime: 
+  for (let i = 2; i <= n; i++) {
+    for (let j = 2; j < i; j++) {
+      if (i % j == 0) continue nextPrime;
+    }
+
+    alert(i);
+  }
+
+
+    </script>
+  </body>
+</html>
