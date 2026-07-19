@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+
+    <title>Array Methods Exercise</title>
+
+    <style>
+      html {
+        font-family: sans-serif;
+      }
+      body {
+        width: 50%;
+        max-width: 800px;
+        min-width: 480px;
+        margin: 0 auto;
+      }
+      .lastResult {
+        color: white;
+        padding: 3px;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <script>
+
+
+ function camelize(str) {
+  return str
+  .split('-')
+  .map ((word, index) => {
+    if (index === 0) {
+      return word;
+    }
+    return word[0].toUpperCase() + word.slice(1);
+  }) .join('');
+}
+
+console.log(camelize('background-color'));
+
+
+    </script>
+  </body>
+</html>
