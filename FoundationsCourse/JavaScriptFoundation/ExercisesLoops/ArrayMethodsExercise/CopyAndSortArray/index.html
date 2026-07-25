@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+
+    <title>Copy and Sort Array</title>
+
+    <style>
+      html {
+        font-family: sans-serif;
+      }
+      body {
+        width: 50%;
+        max-width: 800px;
+        min-width: 480px;
+        margin: 0 auto;
+      }
+      .lastResult {
+        color: white;
+        padding: 3px;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <script>
+/* We have an array of strings arr. We’d like to have a sorted copy of it, but keep arr unmodified.
+Create a function copySorted(arr) that returns such a copy. */
+let arr = ["HTML", "JavaScript", "CSS"];
+
+const copySorted = (arr) => arr.toSorted((a, b) => a.localeCompare(b));
+
+let sorted = copySorted(arr);
+
+alert( sorted ); // CSS, HTML, JavaScript
+alert( arr ); // HTML, JavaScript, CSS (no changes)
+
+    </script>
+  </body>
+</html>
