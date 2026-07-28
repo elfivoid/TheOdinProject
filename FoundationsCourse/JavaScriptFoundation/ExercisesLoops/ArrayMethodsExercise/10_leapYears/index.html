@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+
+    <title></title>
+
+    <style>
+      html {
+        font-family: sans-serif;
+      }
+      body {
+        width: 50%;
+        max-width: 800px;
+        min-width: 480px;
+        margin: 0 auto;
+      }
+      .lastResult {
+        color: white;
+        padding: 3px;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <script>
+/*Exercise 10 - leapYears
+
+Create a function that determines whether or not a given year is a leap year. Leap years are determined by the following rules:
+
+    Leap years are years divisible by four (like 1984 and 2004). However, years divisible by 100 are not leap years (such as 1800 and 1900) unless they are divisible by 400 (like 1600 and 2000, which were in fact leap years). (Yes, it's all pretty confusing)
+
+    -- Learn to Program by Chris Pine
+
+leapYears(2000); // is a leap year: returns true
+leapYears(1985); // is not a leap year: returns false
+
+Still confused? Refer to this leap year breakdown with examples.
+Hints
+
+    use an if statement and && to make sure all the conditions are met properly
+  */
+
+  const leapYears = function(year) {
+    const isYearDivisibleByFour = year % 4 === 0;
+    const isCentury = year % 100 === 0;
+    const isYearDivisibleByFourHundred = year % 400 === 0;
+
+    if (isYearDivisibleByFour && (!isCentury || isYearDivisibleByFourHundred)) {
+      return true;
+    } else {
+      return false;
+    }
+};
+
+console.log(leapYears(1920));
+console.log(leapYears(1946));
+
+    </script>
+  </body>
+</html>
