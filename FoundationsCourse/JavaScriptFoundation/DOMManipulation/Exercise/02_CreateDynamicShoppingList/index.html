@@ -32,6 +32,34 @@
 
     <script>
 
+      const shoppingList = document.querySelector("ul");
+      const itemInput = document.querySelector("input");
+      const addButton = document.querySelector("button");
+      
+      addButton.addEventListener("click", (event) => {
+        event.preventDefault();
+
+        let enteredItem = itemInput.value;
+        itemInput.value = "";
+
+        const listItem = document.createElement("li");
+        const spanItem = document.createElement("span");
+        const deleteButton = document.createElement("button");
+
+        spanItem.textContent = enteredItem;
+        deleteButton.textContent = "Delete";
+
+        listItem.appendChild(spanItem);
+        listItem.appendChild(deleteButton);
+        shoppingList.append(listItem);
+
+        deleteButton.addEventListener("click", (event) => {
+          listItem.remove();
+        });
+
+        itemInput.focus();
+      });
+
     </script>
   </body>
 </html>
